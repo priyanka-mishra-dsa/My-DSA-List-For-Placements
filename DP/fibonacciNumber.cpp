@@ -69,3 +69,35 @@ int solveWithBottomUp(int n)
         return ans;       
     }
 };
+//Space otimization
+class Solution {
+public:
+int solveWithBottomUp(int n)
+{
+    //base case
+    int dp_n_2=0;
+    int dp_n_1=1;
+    int dp_n=0;
+    
+    for(int i=2;i<=n;i++)
+    {
+        int res1=dp_n_1;
+        int res2=dp_n_2;
+        int sum=res1+res2;
+        //store value
+        dp_n=sum;
+          //update
+        dp_n_2=dp_n_1;
+        dp_n_1=dp_n;
+    }
+    return dp_n;
+}
+    int fib(int n) {
+        //handle edge case
+        if(n==0)
+        return 0;
+        if(n==1) return 1;
+        int ans=solveWithBottomUp(n);
+        return ans;       
+    }
+};
