@@ -43,3 +43,29 @@ int solveWithMemo(vector<int>&dp,int n)
     }
 };
 //Method3:using Bottom-Up dp(Tabulation)method
+class Solution {
+public:
+int solveWithBottomUp(int n)
+{
+    vector<int>dp(n+1,-1);
+    //base case
+    dp[0]=0;
+    dp[1]=1;
+    for(int i=2;i<=n;i++)
+    {
+        int res1=dp[i-1];
+        int res2=dp[i-2];
+        int sum=res1+res2;
+        //store value
+        dp[i]=sum;
+    }
+    return dp[n];
+}
+    int fib(int n) {
+        //handle edge case
+        if(n==0)
+        return 0;
+        int ans=solveWithBottomUp(n);
+        return ans;       
+    }
+};
