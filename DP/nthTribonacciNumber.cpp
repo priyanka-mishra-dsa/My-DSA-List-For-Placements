@@ -51,3 +51,35 @@ int solveUsingTabul(int n)
         return ans;   
     }
 };
+//Space optimization 0(1)
+class Solution {
+public:
+int solveUsingTabul(int n)
+{
+    //base cases 
+    int dp_n_3=0;
+    int dp_n_2=1;
+    int dp_n_1=1;
+    int dp_n=1;
+    for(int i=3;i<=n;i++)
+    {
+    int res1=dp_n_1;
+    int res2=dp_n_2;
+    int res3=dp_n_3;
+    int sum=res1+res2+res3;
+    //store that value
+    dp_n=sum;
+    //update all the values
+    dp_n_3=dp_n_2;
+    dp_n_2=dp_n_1;
+    dp_n_1=dp_n;
+    }
+    return dp_n;
+}
+    int tribonacci(int n) {
+        if(n==0) return 0;
+        if(n==1) return 1;
+        int ans=solveUsingTabul(n);
+        return ans;   
+    }
+};
