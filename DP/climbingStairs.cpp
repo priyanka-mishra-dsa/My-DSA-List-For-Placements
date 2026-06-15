@@ -40,3 +40,28 @@ int countWays(vector<int>&dp,int n)
        return ans;
     }
 };
+//Using Tabulation dp
+class Solution {
+public:
+int countWays(int n)
+{
+    vector<int>dp(n+1,-1);
+    //base case
+    dp[0]=1;
+    dp[1]=1;
+    for(int i=2;i<=n;i++)
+    {
+       int jump1stepDown=dp[i-1];
+       int jump2stepDown=dp[i-2];
+       int ways=jump1stepDown+jump2stepDown;
+       //store the value
+       dp[i]=ways;
+    }
+    return dp[n];
+}
+    int climbStairs(int n) {
+       int ans=countWays(n);
+       return ans;
+    }
+};
+//Space optimization dp
