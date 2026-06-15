@@ -65,3 +65,30 @@ int countWays(int n)
     }
 };
 //Space optimization dp
+class Solution {
+public:
+int countWays(int n)
+{
+    //base case
+    int dp_n_1=1;
+    int dp_n_2=1;
+    int dp_n=1;
+    for(int i=2;i<=n;i++)
+    {
+       int jump1stepDown=dp_n_1;;
+       int jump2stepDown=dp_n_2;
+       int ways=jump1stepDown+jump2stepDown;
+       //store the value
+       dp_n=ways;
+       //update all three variables(start from max var value)
+       dp_n_2=dp_n_1;
+       dp_n_1=dp_n;
+
+    }
+    return dp_n;
+}
+    int climbStairs(int n) {
+       int ans=countWays(n);
+       return ans;
+    }
+};
