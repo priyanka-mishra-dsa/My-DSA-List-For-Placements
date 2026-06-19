@@ -54,3 +54,35 @@ int Memorization(vector<int>&cost,vector<int>&dp,int index)
         return minCost; 
     }
 };
+//Using Tabulation
+class Solution {
+public:
+int Tabulation(vector<int>&cost,int index)
+{
+    
+    int n=cost.size();
+    vector<int>dp(n+2,-1);
+    //base case
+    dp[n]=0;
+    dp[n+1]=0;
+    for(int i=n-1;i>=0;i--)
+    {
+        int climb1step=dp[i+1]+cost[i];
+        int climb2step=dp[i+2]+cost[i];
+        int mincost=min(climb1step,climb2step);
+        //store the value
+        dp[i]=mincost;
+    }
+    return dp[index];
+}
+    int minCostClimbingStairs(vector<int>& cost) {
+        int n=cost.size();
+        //start from index 0
+        int cost1=Tabulation(cost,0);
+        //start from index 1
+        int cost2=Tabulation(cost,1);
+        //return min cost among them
+        int minCost=min(cost1,cost2);
+        return minCost; 
+    }
+};
