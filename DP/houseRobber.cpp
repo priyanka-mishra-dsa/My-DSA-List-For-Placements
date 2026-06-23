@@ -1,3 +1,23 @@
+//using recursion
+class Solution {
+public:
+int recursion(vector<int>&nums,int index)
+{
+    int n=nums.size();
+    //base case
+    if(index>=n)
+    return 0;
+    int robHouse=recursion(nums,index+2)+nums[index];
+    int skipHouse=recursion(nums,index+1);
+    int maxMoney=max(robHouse,skipHouse);
+    return maxMoney;
+}
+    int rob(vector<int>& nums) {
+        int ans=recursion(nums,0);
+        return ans;
+        
+    }
+};
 //Memorization dp
 class Solution {
 public:
