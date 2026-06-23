@@ -43,3 +43,28 @@ int Memorization(vector<int>& nums,vector<int>&dp,int index)
         return ans;   
     }
 };
+//Tabulation
+class Solution {
+public:
+int Tabulation(vector<int>&nums,int index)
+{
+    int n=nums.size();
+    vector<int>dp(n+2,-1);
+    //base case
+    dp[n]=0;
+    dp[n+1]=0;
+    for(int i=n-1;i>=0;i--)
+    {
+       int robHouse=dp[i+2]+nums[i];
+       int skipHouse=dp[i+1];
+       int maxMoney=max(robHouse,skipHouse);
+       dp[i]=maxMoney;
+    }
+    return dp[0];
+}
+    int rob(vector<int>& nums) {
+        int ans=Tabulation(nums,0);
+        return ans;
+        
+    }
+};
