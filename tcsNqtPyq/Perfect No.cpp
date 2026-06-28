@@ -7,19 +7,13 @@ int main()
         //main logic
         //store all the divisors of N in vector
         //check in range [1,N-1]
-        vector<int>divi;
+        int sum=0;
         for(int i=1;i<N;i++)
         {
                 if(N%i==0)
                 {
-                        divi.push_back(i);
+                        sum=sum+i;
                 }
-        }
-        //calculate sum of all divisors of N
-        int sum=0;
-        for(int i=0;i<divi.size();i++)
-        {
-                sum=sum+divi[i];
         }
         //compare karo
         if(sum==N)
