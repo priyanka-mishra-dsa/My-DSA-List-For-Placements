@@ -1,0 +1,52 @@
+//brute force using hashmap
+class Solution {
+public:
+    int countPairs(vector<int>& nums, int k) {
+        int n=nums.size();
+        int countPair=0;
+        for(int i=0;i<n;i++) 
+        {
+            for(int j=n-1;j>i;j--)
+            {
+                if(nums[i]==nums[j])
+                {
+                    if(i*j%k==0)
+                    countPair++;
+                }
+            }
+        }   
+        return countPair;
+    }
+};
+//using hashmap
+class Solution {
+public:
+    int countPairs(vector<int>& nums, int k) {
+        int n=nums.size();
+        int countPair=0;
+        unordered_map<int,vector<int>>m;//value->[indexes]
+        for(int i=0;i<n;i++)
+        {
+            int x=nums[i];
+            if(m.count(x)==0)
+            {
+                vector<int>temp;
+                temp.push_back(i);
+                m[x]=temp;
+            }
+            else
+            {
+                //check prev index
+                for(int index:m[x])
+                {
+                    if(index*i%k==0)
+                    countPair++;
+                }
+                //store the current index of element
+                m[x].push_back(i);
+
+            }
+        }
+        return countPair;    
+    }
+};
