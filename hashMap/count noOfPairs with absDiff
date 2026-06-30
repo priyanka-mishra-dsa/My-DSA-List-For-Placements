@@ -1,0 +1,40 @@
+//using 2 pointer
+class Solution {
+public:
+    int countKDifference(vector<int>& nums, int k) {
+        int n=nums.size();
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n-1;j>i;j--)
+            {
+                int firstVal=nums[i];
+                int secondVal=nums[j];
+                int diff=abs(firstVal-secondVal);
+                if(diff==k)
+                {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+};
+//Using hashmap
+class Solution {
+public:
+    int countKDifference(vector<int>& nums, int k) {
+        int n=nums.size();
+        int count=0;
+        unordered_map<int,int>m;
+        for(int i=0;i<n;i++)
+        {
+            int x=nums[i];
+            count=count+m[x-k];
+            count=count+m[x+k];
+            //add element in the map
+            m[x]++;
+        }
+        return count;
+    }
+};
