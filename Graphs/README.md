@@ -1,4 +1,4 @@
 Graph question sequence :
-(a) Graph Traversal
-->Bfs Traversal of Graph
-->Dfs Traversal of Graph
+##1. Graph Traversal
+     1.Bfs Traversal of Graph
+     2.Dfs Traversal of Graph
