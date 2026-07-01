@@ -6,11 +6,10 @@
 2. [DFS Traversal](./dfs.cpp)
 
 ## 2.Problems based on Topological Sort
+1. [Topological Sort](./topologicalSort.cpp)
 
-1.[Topological Sort](./topologicalSort.cpp)
+2. [Course Shedule I](./courseShedule.cpp)
 
-2.[Course Shedule I](./courseShedule.cpp)
-
-3.[Course Shedule II](./courseShedule2.cpp)
+3. [Course Shedule II](./courseShedule2.cpp)
 
 
