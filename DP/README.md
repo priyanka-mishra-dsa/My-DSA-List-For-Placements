@@ -1,4 +1,4 @@
-###1.1D Dynamic Programming
+1. 1D Dynamic Programming
    1. Fibonacci Number (LC 509)
    2. N-th Tribonacci Number (LC 1137)
    3. Climbing Stairs (LC 70)
