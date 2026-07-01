@@ -18,4 +18,14 @@
 5. [Alien Dictionary](./alienDic.cpp)
 6. [Parallel Courses III](./parallelCourses3.cpp)
 
+## 3. Cycle Detection
+
+### Undirected Graph
+
+1. [Detect Cycle in Undirected Graph](./detectCycleInUndirectedGraph.cpp)
+
+### Directed Graph
+
+1. [Detect Cycle in Directed Graph](./detCycInDirectedGraph.cpp)
+
 
