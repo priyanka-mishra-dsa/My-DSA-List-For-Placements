@@ -1,4 +1,4 @@
-## 1. Basic 1D Dynamic Programming
+## 1.1D Dynamic Programming
 
 - Fibonacci Number (LC 509)
 - N-th Tribonacci Number (LC 1137)
