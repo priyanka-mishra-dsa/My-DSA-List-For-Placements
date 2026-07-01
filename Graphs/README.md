@@ -28,4 +28,9 @@
 
 1. [Detect Cycle in Directed Graph](./detCycInDirectedGraph.cpp)
 
+## 4. Bipartite Graph
+
+1. [Is Graph Bipartite?](./isGraphBipartite.cpp)
+2. [Possible Bipartition](./possibleBiparition.cpp)
+
 
