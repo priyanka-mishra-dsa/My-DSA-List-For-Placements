@@ -1,10 +1,14 @@
 # Graph Question Sequence
 
-## 1. Graph Traversal
+## 1. Graph Traversal(BFS/DFS)
 
 1. [BFS Traversal](./bfs.cpp)
 2. [DFS Traversal](./dfs.cpp)
 3. [Number of Provinces](./numberOfProvinces.cpp)
+4. [Find if Path Exists in Graph](./findIfPathExistsInGraph.cpp)
+5. [Keys and Rooms](./keyRooms.cpp)
+6. [Clone Graph](./cloneGraph.cpp)
+7. [All Paths From Source to Target](./allPathsFromSrcToTarget.cpp)
 
 ## 2.Problems based on Topological Sort
 1. [Topological Sort](./topologicalSort.cpp)
