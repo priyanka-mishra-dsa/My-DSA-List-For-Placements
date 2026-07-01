@@ -7,9 +7,10 @@
 
 ## 2.Problems based on Topological Sort
 1. [Topological Sort](./topologicalSort.cpp)
-
 2. [Course Shedule I](./courseShedule.cpp)
-
 3. [Course Shedule II](./courseShedule2.cpp)
+4. [Find Eventual Safe States](./findSafeNodes.cpp)
+5. [Alien Dictionary](./alienDic.cpp)
+6. [Parallel Courses III](./parallelCourses3.cpp)
 
 
