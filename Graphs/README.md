@@ -1,4 +1,6 @@
-Graph question sequence :
-##1. Graph Traversal
-     1.Bfs Traversal of Graph
-     2.Dfs Traversal of Graph
+# Graph Question Sequence
+
+## 1. Graph Traversal
+
+1. [BFS Traversal](./bfs.cpp)
+2. [DFS Traversal](./dfs.cpp)
