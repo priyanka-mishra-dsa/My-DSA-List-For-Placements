@@ -6,3 +6,4 @@
 4. [Min Cost Climbing Stairs (LC 746)](./minCostClimbingStairs.cpp)
 5. [House Robber (LC 198)](./houseRobber.cpp)
 6. [House Robber II (LC 213)](./houseRobber2.cpp)
+7. [Jump Game](./JumpGame)
