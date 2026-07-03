@@ -65,19 +65,21 @@ public:
     bool canJump(vector<int>& nums) {
         int n=nums.size();
         vector<bool>dp(n,false);
+        //base case
         dp[n-1]=true;
         for(int i=n-2;i>=0;i--)
         {
             int maxJump=nums[i];
             for(int jump=1;jump<=maxJump;jump++)
             {
-                if(dp[jump+i]==true)
+                if(i+jump<n &&dp[i+jump]==true)
                 {
                     dp[i]=true;
                     break;
                 }
+
             }
         }
-        return dp[0];  
+        return dp[0];
     }
 };
