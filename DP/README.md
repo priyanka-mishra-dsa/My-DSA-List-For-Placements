@@ -8,3 +8,5 @@
 6. [House Robber II (LC 213)](./houseRobber2.cpp)
 7. [Jump Game](./JumpGame)
 8. [Jump Game 2](./JumpGame2)
+9. [Maximize cut segment](./maximizeCutSegment.cpp)
+10. [Delete and Earn](./Delete&Earn.cpp)
