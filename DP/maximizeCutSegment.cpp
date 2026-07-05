@@ -55,3 +55,26 @@ class Solution {
     }
 };
 //using tabulation dp
+class Solution {
+  public:
+    int maximizeCuts(int n, int x, int y, int z) {
+        vector<int>dp(n+1,-1);
+        dp[0]=0;
+        for(int i=1;i<=n;i++)
+        {
+             int cutInLenX=(i-x<0)?INT_MIN:dp[i-x];
+             int cutInLenY=(i-y<0)?INT_MIN:dp[i-y];
+             int cutInLenZ=(i-z<0)?INT_MIN:dp[i-z];
+             int maxSegment=max({cutInLenX,cutInLenY,cutInLenZ});
+             if(maxSegment!=INT_MIN)
+             maxSegment=1+maxSegment;
+             //store
+             dp[i]=maxSegment;
+        }
+        int ans= dp[n];
+        if(ans<0)
+        return 0;
+        else
+        return ans;
+    }
+};
