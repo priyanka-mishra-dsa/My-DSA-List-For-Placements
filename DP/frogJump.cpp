@@ -27,3 +27,23 @@ class Solution {
     }
 };
 //Tabulation
+class Solution {
+  public:  
+    int minCost(vector<int>& height) {
+        int n=height.size();
+        vector<int>dp(n,-1);
+        dp[n-1]=0;
+        for(int i=n-2;i>=0;i--)
+        {
+            int jump1step=dp[i+1]+abs(height[i+1]-height[i]);
+            int jump2step=INT_MAX;
+            if(i+2<n)
+            jump2step=dp[i+2]+abs(height[i+2]-height[i]);
+            int minCost=min(jump1step,jump2step);
+            dp[i]=minCost;
+            
+        }
+        return dp[0];
+        
+    }
+};
