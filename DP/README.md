@@ -11,3 +11,4 @@
 9. [Maximize cut segment](./maximizeCutSegment.cpp)
 10. [Delete and Earn](./Delete&Earn.cpp)
 11. [Solving Questions With BrainPower](./SolvingquestionswithBrainPower.cpp)
+12. [Frog Jump](./frogJump.cpp)
