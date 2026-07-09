@@ -15,3 +15,5 @@
 13. [Frog Jump with k steps](./frogJumpWithKsteps.cpp)
 14. [combination sum 4](./combinationSum4.cpp)
 15. [coin change](./coinChange.cpp)
+16. [Decode ways 1](./decodeWays.cpp)
+17. [Decode ways 2](./decodeWays2.cpp)
