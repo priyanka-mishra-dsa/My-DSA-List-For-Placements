@@ -12,3 +12,6 @@
 10. [Delete and Earn](./Delete&Earn.cpp)
 11. [Solving Questions With BrainPower](./SolvingquestionswithBrainPower.cpp)
 12. [Frog Jump](./frogJump.cpp)
+13. [Frog Jump with k steps](./frogJumpWithKsteps.cpp)
+14. [combination sum 4](./combinationSum4.cpp)
+15. [coin change](./coinChange.cpp)
