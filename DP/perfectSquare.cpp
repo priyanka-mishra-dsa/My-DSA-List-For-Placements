@@ -26,3 +26,23 @@ int solve(int n,vector<int>&dp)
     }
 };
 //Tabulation
+class Solution {
+public:
+    int numSquares(int n) {
+        vector<int>dp(n+1,INT_MAX);
+        //base case
+        dp[0]=0;
+        for(int given_n=1;given_n<=n;given_n++)
+        {
+            int minCount=INT_MAX;
+            for(int i=1;i*i<=given_n;i++)
+            {
+                int ans=dp[given_n-i*i]+1;
+                minCount=min(minCount,ans);
+            }
+            //store
+            dp[given_n]=minCount;    
+        }
+        return dp[n];
+    }
+};
