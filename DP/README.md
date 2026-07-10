@@ -18,3 +18,5 @@
 16. [coin change](./coinChange.cpp)
 17. [Decode ways 1](./decodeWays.cpp)
 18. [Decode ways 2](./decodeWays2.cpp)
+19. [Perfect Squares](./perfectSquare.cpp)
+20. [Minimum Cost For Tickets](./minCostForTicktes.cpp)
