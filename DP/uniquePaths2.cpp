@@ -31,3 +31,43 @@ int solve(int i, int j,int row,int col,vector<vector<int>>& obstacleGrid,vector<
     }
 };
 //Tabulation
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        int row=obstacleGrid.size();
+        int col=obstacleGrid[0].size();
+        //take 2d dp
+        vector<vector<long long>>dp(row,vector<long long>(col,0));
+        for(int i=row-1;i>=0;i--)
+        {
+            for(int j=col-1;j>=0;j--)
+            {
+                //handle obstacle
+                if(obstacleGrid[i][j]==1)
+                {
+                    dp[i][j]=0;
+                }
+                 //handle base case
+                else if(i==row-1 && j==col-1)
+                {
+                    dp[i][j]= 1;
+                }
+                else
+                {
+                    long long right=0,down=0;
+                    if(j+1<col)
+                    {
+                        right=dp[i][j+1];
+                    }
+                    if(i+1<row)
+                    {
+                        down=dp[i+1][j];
+                    }
+                    long long countPaths=right+down;
+                    dp[i][j]=countPaths;
+                }
+            }
+        }
+        return dp[0][0];
+    }
+};
