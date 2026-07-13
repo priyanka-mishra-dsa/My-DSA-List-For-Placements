@@ -29,7 +29,8 @@
 2. [Unique Paths II (LC 63)](./uniquePaths2.cpp)
 3. [Minimum Path Sum (LC 64)](./minimumPathSum.cpp)
 4. [Triangle (LC 120)](./triangle.cpp)
-5. [Gold Mine Problem (GFG)](./goldMineProblem.cpp)
+5. [Champagne Tower](./champagneTower.cpp)
+6. [Gold Mine Problem (GFG)](./goldMineProblem.cpp)
 
 ### Phase 2: Directional Variants & Falling Paths
 
