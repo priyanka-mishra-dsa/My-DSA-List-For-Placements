@@ -32,3 +32,32 @@ double solve(int i,int j,int poured,vector<vector<double>>&dp)
     }
 };
 //Tabulation(Bottom-Up)
+class Solution {
+public:
+    double champagneTower(int poured, int query_row, int query_glass) {
+        //take squre 2d dp
+        vector<vector<double>>dp(query_row+2,vector<double>(query_row+2,0.0));
+        //base case
+        dp[0][0]=poured;
+        for(int row=0;row<query_row;row++)
+        {
+            for(int col=0;col<=row;col++)
+            {
+                //extra water nikal lo jo beh jayega
+                double extra=(dp[row][col]-1.0)/2.0;
+                if(extra>0)
+                {
+                    //store in left
+                    dp[row+1][col]=dp[row+1][col]+extra;
+                    //store in right
+                    dp[row+1][col+1]=dp[row+1][col+1]+extra;
+                }    
+            }
+        }
+        double ans=dp[query_row][query_glass];
+        if(ans>1.0)
+        return 1.0;
+        else
+        return ans;     
+    }
+};
