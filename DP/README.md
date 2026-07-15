@@ -37,7 +37,7 @@
 6. [Minimum Falling Path Sum (LC 931)](./minimumFallingPathSum.cpp)
 7. [Minimum Falling Path Sum II (LC 1289)](./minimumFallingPathSum2.cpp)
 8. [Maximum Path Sum in Matrix (GFG)](./maximumPathSumInMatrix.cpp)
-9. [Maximum Number of Moves in a Grid (LC 2684)](./maximumNumberOfMovesInGrid.cpp)
+9. [Maximum Number of Moves in a Grid (LC 2684)](./maxNumOfMovesInGrid.cpp)
 10. [Minimum Path Cost in a Grid (LC 2304)](./minimumPathCostInGrid.cpp)
 11. [Maximum Non-Negative Product in a Matrix (LC 1594)](./maximumNonNegativeProductInMatrix.cpp)
 
