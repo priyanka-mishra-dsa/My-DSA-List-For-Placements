@@ -38,3 +38,39 @@ class Solution {
     }
 };
 //Tabulation(Bottom-up)
+class Solution {
+  public:
+    int maxGold(vector<vector<int>>& grid) {
+       int M=grid.size();
+       int N=grid[0].size();
+       vector<vector<int>>dp(M,vector<int>(N+1,0));
+       //base case
+       //dp[row][N]=0;(vector intialization me base case is covered)
+       for(int col=N-1;col>=0;col--)
+       {
+           for(int row=0;row<M;row++)
+           {
+               int move1=0;
+               if(row>0)
+                move1=dp[row-1][col+1];
+                //
+                int move2=dp[row][col+1];
+                //
+                int move3=0;
+               if(row<M-1)
+                move3=dp[row+1][col+1];
+               int maxPathSum=max({move1,move2,move3});
+               int maxGold=grid[row][col]+maxPathSum;
+               //store the value at the current index
+               dp[row][col]=maxGold;
+           }
+       }
+       //the miner can start from any row in the first column
+       int ans=0;
+       for(int row=0;row<M;row++)
+       {
+           ans=max(ans,dp[row][0]);
+       }
+        return ans;
+    }
+};
