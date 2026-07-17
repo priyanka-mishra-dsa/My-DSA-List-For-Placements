@@ -55,6 +55,7 @@
 18. [Check If There Is a Valid Parentheses String Path (LC 2267)](./checkIfThereIsAValidParenthesesStringPath.cpp)
 19. [Out of Boundary Paths (LC 576)](./outOfBoundaryPaths.cpp)
 20. [Consecutive Ones Not Allowed (GFG)](./consecutiveOnesNotAllowed.cpp)
+21. [Knight Probability in Chessboard](./knightProbInChessboard.cpp)
 
 ### Phase 4: Square / Rectangle DP
 
