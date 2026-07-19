@@ -89,4 +89,5 @@
 39. [Maximum Number of Points with Cost (LC 1937)](./maximumNumberOfPointsWithCost.cpp)
 40. [Mobile Numeric Keypad (GFG)](./mobileNumericKeypad.cpp)
 41. [Knight Dialer (LC 935)](./knightDialer.cpp)
+42. [Number of Ways to Paint N × 3 Grid ](./noOfWaysToPaint.cpp)
 
