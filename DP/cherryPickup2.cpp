@@ -115,3 +115,72 @@ int solve(int row,int c1,int c2,vector<vector<int>>& grid,vector<vector<vector<i
         return ans;  
     }
 };
+//Tabulation
+class Solution {
+public:
+int m,n;
+  int cherryPickup(vector<vector<int>>& grid) {
+        m=grid.size();
+        n=grid[0].size();
+        vector<vector<vector<int>>>dp(m,vector<vector<int>>(n,vector<int>(n,0)));      
+        //handle base case which is last row (fill last row in the table )
+         // Both robots are on the last row
+        for(int c1=0;c1<n;c1++)
+        {
+            for(int c2=0;c2<n;c2++)
+            {
+                if(c1==c2)
+                {
+                    dp[m-1][c1][c2]=grid[m-1][c1];
+                }
+                else
+                {
+                    dp[m-1][c1][c2]=grid[m-1][c1]+grid[m-1][c2];;
+                }
+            }
+        }
+        //handle last row
+        //start iteration from second last row
+        for(int row=m-2;row>=0;row--)
+        {
+           //for rob1  1 move
+           for(int c1=0;c1<n;c1++)
+           {
+            //rob2 3 moves
+            for(int c2=0;c2<n;c2++)
+            {
+                //current cherris
+                int cherris;
+                //both robots present at the same sell
+                if(c1==c2)
+                cherris=grid[row][c1];
+                else
+                {
+                    cherris=grid[row][c1]+grid[row][c2];
+                }
+                //we want max path sum
+                int maxPathSum=0;
+                //go given direction and find maxPathsum
+                for(int d1=-1;d1<=1;d1++)
+                {
+                    for(int d2=-1;d2<=1;d2++)
+                    {
+                        int nextc1=c1+d1;
+                        int nextc2=c2+d2;
+                        //valid col
+                        if(nextc1>=0 && nextc1<n && nextc2>=0 && nextc2<n)
+                        {
+                            int pathSum=cherris+dp[row+1][nextc1][nextc2];
+                            maxPathSum=max(maxPathSum,pathSum);
+                        }
+                    }
+                }
+                //store
+                dp[row][c1][c2]=maxPathSum;
+            }
+
+           }
+        }
+        return dp[0][0][n-1];
+    }
+};
