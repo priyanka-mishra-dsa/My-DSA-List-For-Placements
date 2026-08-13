@@ -12,5 +12,8 @@
 8. [ Count the Number of Fair Pairs](./countNumOfFairPairs.cpp)
 
 
+## Pattern 2: Opposite Direction Two Pointer Approach
+
+
 
 
