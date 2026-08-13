@@ -8,7 +8,7 @@
 4. [4Sum](./4sum.cpp)
 5. [Boats to Save People](./boatsTosavePeople.cpp)
 6. [Valid Triangle Number](./validTriangleNumber.cpp)
-7. [Count Pairs Whose Sum is Less than Target](./LC2824.cpp)
+7. [Count Pairs Whose Sum is Less than Target](./Lc2824.cpp)
 
 
 
