@@ -2,11 +2,13 @@
 
 ## Pattern 1: Sort + Two Pointer Approach
 
-1. [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-2. [3Sum](https://leetcode.com/problems/3sum/)
-3. [3Sum Closest](https://leetcode.com/problems/3sum-closest/)
-4. [4Sum](https://leetcode.com/problems/4sum/)
-5. [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
-6. [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
+1. [Two Sum II - Input Array Is Sorted](./twoSum.cpp)
+2. [3Sum](./3sum.cpp)
+3. [3Sum Closest](./3sumClosest.cpp)
+4. [4Sum](./4sum.cpp)
+5. [Boats to Save People](./boatsToSavePeople.cpp)
+6. [Valid Triangle Number](./validTriangleNumber.cpp)
+
+
 
 
