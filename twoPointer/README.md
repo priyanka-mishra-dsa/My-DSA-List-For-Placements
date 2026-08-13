@@ -9,6 +9,7 @@
 5. [Boats to Save People](./boatsTosavePeople.cpp)
 6. [Valid Triangle Number](./validTriangleNumber.cpp)
 7. [Count Pairs Whose Sum is Less than Target](./Lc2824.cpp)
+8. [ Count the Number of Fair Pairs](./countNumOfFairPairs.cpp)
 
 
 
