@@ -1,41 +1,36 @@
 class Solution {
 public:
-bool isAlphaNumeric(char &ch)
+bool isAlphaNumeric(char ch)
 {
-    if(ch>='0'&&ch<='9' ||tolower(ch)>='a'&&tolower(ch)<='z')
+    if(ch>='0'&& ch<='9' ||tolower(ch)>='a'&& tolower(ch)<='z')
     return true;
+    else
     return false;
 }
     bool isPalindrome(string s) {
         int n=s.size();
-        //take 2 pointer
-        int i=0,j=n-1;
-        while(i<j)
+        int first=0;
+        int second=n-1;
+        while(first<second) 
         {
-            //check that each char is an alphanumeric char or not
-            //convert uppercase letter into lowercase letter
-            if(!isAlphaNumeric(s[i]))
+            if(!isAlphaNumeric(s[first]))
             {
-                //if i pointer is not pointing alphanumeric char then move i pointer
-                i++;
-                continue;
+                first++;
             }
-            if(!isAlphaNumeric(s[j]))
+            else if(!isAlphaNumeric(s[second]))
             {
-                //if j pointer is not pointing alphanumeric char then move j pointer
-                j--;
-                continue;
+                second--;
             }
-            //if both pointer points same char
-            if(tolower(s[i])==tolower(s[j]))
+            else if(tolower(s[first])==tolower(s[second]))
             {
-                i++;
-                j--;
+                first++;
+                second--;
             }
             else
-            return false;
+            {
+                return false;
+            }
         }
-        return true;
-        
+        return true;  
     }
 };
