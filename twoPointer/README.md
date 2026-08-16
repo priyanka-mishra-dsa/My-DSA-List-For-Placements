@@ -13,7 +13,8 @@
 
 
 ## Pattern 2: Opposite Direction Two Pointer Approach
-1. [Reverse String](./revString.cpp)
+1.[Reverse String](./revString.cpp)
+2.[Reverse Vowels of a String](./revVowelOfString.cpp)
 
 
 
