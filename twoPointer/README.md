@@ -13,6 +13,8 @@
 
 
 ## Pattern 2: Opposite Direction Two Pointer Approach
+1. [Reverse String](./revString.cpp)
+
 
 
 
