@@ -1,37 +1,34 @@
 class Solution {
 public:
-bool isVowel(char &ch)
+bool isVowel(char ch)
 {
-    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+    if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
     return true;
+    else 
     return false;
 }
     string reverseVowels(string s) {
         int n=s.size();
-        //take 2 pointer
-        int i=0,j=n-1;
-        while(i<j)
+        //apply 2 pointer
+        int first=0;
+        int second=n-1;
+        while(first<second)
         {
-            //i pointer wala char is not a vowel then move the pointer
-            if(!isVowel(s[i]))
+            if(isVowel(s[first])&& isVowel(s[second]))
             {
-                i++;
+                swap(s[first],s[second]);
+                first++;
+                second--;
             }
-             //j pointer wala char is not a vowel then move the pointer
-            else if(!isVowel(s[j]))
+            else if(!isVowel(s[first]))
             {
-                j--;
+                first++;
             }
-            else
+            else if(!isVowel(s[second]))
             {
-                //both char is vowel
-                swap(s[i],s[j]);
-                i++;
-                j--;
+                second--;
             }
         }
-        return s;
-
-        
+        return s;   
     }
 };
