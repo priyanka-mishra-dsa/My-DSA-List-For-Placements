@@ -1,6 +1,6 @@
 # Two Pointer Approach
 
-## Pattern 1: Sort + Two Pointer Approach
+## Pattern 1: Sort + Opposite Direction Two Pointer Approach
 
 1. [Two Sum II - Input Array Is Sorted](./2SumII.cpp)
 2. [3Sum](./3Sum.cpp)
