@@ -16,6 +16,7 @@
 1. [Reverse String](./revString.cpp)
 2. [Reverse Vowels of a String](./revVowelOfString.cpp)
 3. [Valid Palindrome](./validPalindrome.cpp)
+4. [Valid Palindrome II](./validPalindrom2.cpp)
 
 
 
