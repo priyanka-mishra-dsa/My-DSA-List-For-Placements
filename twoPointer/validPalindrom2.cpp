@@ -2,7 +2,7 @@ class Solution {
 public:
 bool isPalindrome(string &s,int first,int second)
 {
-    while(first<second)
+    while(first<=second)
     {
         if(s[first]==s[second])
         {
@@ -11,29 +11,30 @@ bool isPalindrome(string &s,int first,int second)
         }
         else if(s[first]!=s[second])
         {
-             return false;
+            return false;
         }
     }
     return true;
 }
     bool validPalindrome(string s) {
-        //use 2 pointer
-        int i=0,j=s.size()-1;
-        while(i<j)
+        int n=s.size();
+        int first=0;
+        int second=n-1;
+        while(first<second)
         {
-            if(s[i]==s[j])
+            if(s[first]==s[second])
             {
-                //move pointers
-                i++;
-                j--;
+                first++;
+                second--;
             }
-            else if(s[i]!=s[j])
+            else if(s[first]!=s[second])
             {
-                //delete one char when i and j wali value not equal
-                //after deleting one char string should be palindrome
-               return isPalindrome(s,i+1,j) || isPalindrome(s,i,j-1);
+                //possible 2 chars to delete 
+                //"abca"->bc
+                //delete b
+                return(isPalindrome(s,first+1,second)||isPalindrome(s,first,second-1));
             }
-        }
-        return true;
+        } 
+        return true;  
     }
 };
