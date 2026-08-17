@@ -17,6 +17,8 @@
 2. [Reverse Vowels of a String](./revVowelOfString.cpp)
 3. [Valid Palindrome](./validPalindrome.cpp)
 4. [Valid Palindrome II](./validPalindrom2.cpp)
+5. [Container With Most Water](./containerWithMostWater.cpp)
+6. [Trapping Rain Water](./trappingRainWater.cpp)
 
 
 
