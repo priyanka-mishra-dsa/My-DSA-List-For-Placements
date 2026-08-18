@@ -19,6 +19,7 @@
 4. [Valid Palindrome II](./validPalindrom2.cpp)
 5. [Container With Most Water](./containerWithMostWater.cpp)
 6. [Trapping Rain Water](./trappingRainWater.cpp)
+7. [Segregate 0s and 1s](./segregate0and1.cpp)
 
 
 
