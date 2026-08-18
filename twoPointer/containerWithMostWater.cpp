@@ -18,6 +18,7 @@ public:
             int area=w*h;
             maxArea=max(area,maxArea);
             //you also have to move your pointer
+            //we move to skip small value wala pointer because we want bigger value
             if(height[first]<height[second])
             {
                 first++;
