@@ -1,32 +1,26 @@
 class Solution {
   public:
-    bool isProduct(vector<int> arr, long long x) {
-        // sort the array
-        sort(arr.begin(),arr.end());
-        //9 10 20 40,x=400
-        //use 2 pointer
-        int i=0,j=arr.size()-1;
-        while(i<j)
+    bool isProduct(vector<int>& nums, long long target) {
+        int n=nums.size();
+        sort(nums.begin(),nums.end());
+        int first=0;
+        int second=n-1;
+        while(first<second)
         {
-            long long product=1LL*arr[i]*arr[j];
-            if(product<x)
+            long long product=1LL*nums[first]*nums[second];
+            if(product<target)
             {
-                //increase the value
-                //move i pointer
-                i++;
+                first++;
             }
-            else if(product>x)
+            else if(product>target)
             {
-               //decrease the value
-               //move j pointer
-                j--; 
+                second--;
             }
-            else if(product==x)
+            else if(product==target)
             {
                 return true;
             }
         }
         return false;
-        
     }
 };
