@@ -1,32 +1,32 @@
 class Solution {
 public:
     int maxArea(vector<int>& height) {
-        //contaire=area=height*weidth
-        //for calculate weidth(space) should be max substract two pointers 
-        //for calculate height to store max water=>always select smaller height wala
-        //maxarea==maxwater
-        //take 2 pointers
+        //i have to choose only 2 vertical lines which act as a container
+        //for this i can use 2 pointer
+        //area=width*height
+        //width=second-first(pointer points my choosen both lines)
+        //height=dono lines ki kuch height hogi ,hmara water chote height wali hi lines tak fill ho payenge
+        //i have to choose min height wala line
         int n=height.size();
-        int h=0,w=0,i=0,j=n-1,area,maxArea=0;
-        while(i<j)
+        int maxArea=0;
+        int first=0;
+        int second=n-1;
+        while(first<second)
         {
-            //always take min height wala value
-            h=min(height[i],height[j]);
-            w=j-i;
-            area=h*w;
+            int w=second-first;
+            int h=min(height[first],height[second]);
+            int area=w*h;
             maxArea=max(area,maxArea);
-            //always move those pointer whose height is smaller
-            if(height[i]>height[j])
+            //you also have to move your pointer
+            if(height[first]<height[second])
             {
-                j--;
+                first++;
             }
-            else if(height[j]>=height[i])
+            else if(height[first]>=height[second])
             {
-                i++;
+                second--;
             }
         }
-        return maxArea;
-
-        
+        return maxArea;    
     }
 };
