@@ -1,25 +1,26 @@
 class Solution {
   public:
-    void segregate0and1(vector<int> &arr) {
-        //use 2 pointer
-        int i=0,j=arr.size()-1;
-        while(i<j)
+    void segregate0and1(vector<int> &nums) {
+        int n=nums.size();
+        int first=0;
+        int second=n-1;
+        while(first<second)
         {
-            if(arr[i]==0)
+            if(nums[first]==0)
             {
-                i++;
+                first++;
             }
-            else if(arr[j]==1)
+            else if(nums[second]==0)
             {
-                j--;
+                swap(nums[first],nums[second]);
+                //move both pointer
+                first++;
+                second--;
             }
-            else if(arr[i]==1 && arr[j]==0)
+            else if(nums[second]==1)
             {
-               swap(arr[i],arr[j]);
-                i++;
-                j--;
+                second--;
             }
         }
-        
     }
 };
